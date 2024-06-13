@@ -1,0 +1,42 @@
+const prompt = require('prompt-async');
+const hotelSystem = require('./SistemaHotel.js');
+
+async function menu() {
+    console.log(`
+1. Adicionar Hotel
+2. Buscar Hoteis por Cidade
+3. Fazer Reserva
+4. Cancelar Reserva
+5. Listar Reservas
+6. Sair
+    `);
+
+    const { escolha } = await prompt.get(['escolha']);
+
+    switch (escolha) {
+        case '1':
+            await hotelSystem.adicionarHotel();
+            break;
+        case '2':
+            await hotelSystem.buscarHoteisPorCidade();
+            break;
+        case '3':
+            await hotelSystem.fazerReserva();
+            break;
+        case '4':
+            await hotelSystem.cancelarReserva();
+            break;
+        case '5':
+            hotelSystem.listarReservas();
+            break;
+        case '6':
+            console.log('Saindo...');
+            return;
+        default:
+            console.log('Escolha inválida.');
+    }
+
+    await menu();
+}
+
+module.exports = menu;
