@@ -5,7 +5,7 @@
 ## ✏ Para iniciar o projeto basta utilizar os seguintes comandos
 
 - Clonar o repositório
-    <pre><code>git clone https://github.com/DeividsonOmedio/MaisPraTi</code></pre>
+    <pre><code>git clone https://github.com/DeividsonOmedio/DevFullStack-MaisPraTi</code></pre>
 
 - Instalar as dependências do pom.xml na pasta modulo07\atividade13\pom.xml
 
